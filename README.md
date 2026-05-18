@@ -172,10 +172,10 @@ _Describe any creative features or enhancements you've added beyond the original
 
 ## 👨‍💼 Author
 
-**Name:** [Your Name]  
+**Name:** [Hemanth Tejavath]
 **Internship:** NxtWave - Internship 1  
 **Duration:** 1 Month  
-**Submission Date:** [DD/MM/YYYY]
+**Submission Date:** [19/05/2026]
 
 ---
 
@@ -194,4 +194,4 @@ This project is created for educational purposes as part of the NxtWave Internsh
 ---
 
 **Last Updated:** May 18, 2026  
-**Status:** In Progress ⏳
+**Status:** Completed
