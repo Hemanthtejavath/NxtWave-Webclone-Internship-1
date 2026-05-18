@@ -119,13 +119,6 @@ The project is fully responsive and optimized for:
 
 ---
 
-## ✨ Additional Features/Creative Liberty
-
-_Describe any creative features or enhancements you've added beyond the original design:_
-
-- Feature 1: ******\_\_\_******
-- Feature 2: ******\_\_\_******
-- Feature 3: ******\_\_\_******
 
 ---
 
@@ -160,15 +153,7 @@ _Describe any creative features or enhancements you've added beyond the original
 | Layout breaking on mobile     | Test with browser DevTools device emulation        |
 
 ---
-
-## 📚 Resources & Learning Materials
-
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [Bootstrap Documentation](https://getbootstrap.com/)
-- [CSS Tricks](https://css-tricks.com/)
-- [Can I Use](https://caniuse.com/) - Browser compatibility checker
-
----
+--
 
 ## 👨‍💼 Author
 
