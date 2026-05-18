@@ -175,7 +175,7 @@ Throughout the process, I:
 
 ## 📽️ Final Thoughts
 
-This project helped me **strengthen my frontend fundamentals** and proved that even without JavaScript, it’s possible to build interactive, beautiful static websites. I learned a lot about layout, responsiveness, and how to break down a complex design into manageable components.
+This project helped me **strengthen my frontend fundamentals** and proved that even with JavaScript, it’s possible to build interactive, beautiful static websites. I learned a lot about layout, responsiveness, and how to break down a complex design into manageable components.
 
 ---
 
