@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nova Finance</title>
+
+    <!-- External Libraries -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="index_mobile.css"
+      media="screen and (max-width: 768px)"
+    />
+  </head>
+
+  <body class="overflow-hidden">
+    <!-- ======================== MAIN CONTAINER ======================== -->
+    <div class="main-container d-flex vh-100 overflow-hidden">
+      <!-- ======================== SIDEBAR NAVIGATION ======================== -->
+      <aside
+        class="sidebar d-none d-md-flex bg-white border-end p-4 flex-shrink-0 position-sticky top-0"
+      >
+        <div class="mb-5">
+          <h3><i class="bi bi-lightning-charge-fill"></i> Nova</h3>
+          <p class="text-secondary">Financial</p>
+        </div>
+
+        <ul class="nav flex-column gap-4">
+          <li class="nav-item">
+            <a
+              class="nav-link active-link"
+              href="#section1"
+              data-section-target="section1"
+            >
+              <i class="bi bi-grid me-2"></i>Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2" data-section-target="section2">
+              <i class="bi bi-arrow-left-right me-2"></i>Transactions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3" data-section-target="section3">
+              <i class="bi bi-bar-chart me-2"></i>Analytics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section4" data-section-target="section4">
+              <i class="bi bi-credit-card me-2"></i>My Cards
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section5" data-section-target="section5">
+              <i class="bi bi-gear me-2"></i>Settings
+            </a>
+          </li>
+        </ul>
+
+        <div class="upgrade-box">
+          <div class="upgrade-icon">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+          <h5>Upgrade to Pro</h5>
+          <p>Get advanced insights and unlimited transactions</p>
+          <button type="button" id="upgradeBtn">Upgrade Now</button>
+        </div>
+      </aside>
+
+      <!-- ======================== MAIN CONTENT AREA ======================== -->
+      <div class="content-area flex-grow-1 h-100 overflow-hidden">
+        <!-- ======================== TOP NAVIGATION BAR ======================== -->
+        <nav class="navbar">
+          <div class="flex-grow-1">
+            <h2 class="mb-1" id="pageTitle">Dashboard</h2>
+            <p class="text-secondary mb-0" id="pageSubtitle">
+              Overview of your financial activity
+            </p>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <div
+              class="d-none d-lg-flex align-items-center rounded px-3 py-2 nav-search"
+            >
+              <i class="bi bi-search me-2"></i>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="form-control border-0 p-0 shadow-none bg-transparent"
+              />
+            </div>
+
+            <i class="bi bi-bell fs-5"></i>
+
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://i.pravatar.cc/40"
+                class="rounded-circle"
+                width="40"
+                height="40"
+                alt="Profile"
+              />
+              <i class="bi bi-arrow-down"></i>
+              <div class="d-none d-sm-block">
+                <h6 class="m-0">Hemanth</h6>
+                <small class="text-secondary">Premium</small>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ======================== SCROLLABLE CONTENT ======================== -->
+        <main class="content-body overflow-auto p-2">
+          <!-- ======================== SECTION 1: DASHBOARD ======================== -->
+          <section id="section1" class="page-section active-section">
+            <!-- Summary Cards: Display key financial metrics -->
+            <div class="summary-cards p-3">
+              <div class="summary-card summary-card--primary">
+                <div class="summary-card__top">
+                  <div class="summary-card__icon summary-card__icon--primary">
+                    <i class="bi bi-wallet2"></i>
+                  </div>
+                  <span class="summary-card__metric">2.4%</span>
+                </div>
+                <div>
+                  <p class="summary-card__label">Total Balance</p>
+                  <h1 class="summary-card__value">$24,563.89</h1>
+                </div>
+              </div>
+
+              <div class="summary-card summary-card--light">
+                <div class="summary-card__top">
+                  <div class="summary-card__icon summary-card__icon--blue">
+                    <i class="bi bi-graph-up"></i>
+                  </div>
+                  <span class="summary-card__metric">8.2%</span>
+                </div>
+                <div>
+                  <p class="summary-card__label">Income</p>
+                  <h1 class="summary-card__value">$8,249.50</h1>
+                </div>
+              </div>
+
+              <div class="summary-card summary-card--light">
+                <div class="summary-card__top">
+                  <div class="summary-card__icon summary-card__icon--red">
+                    <i class="bi bi-arrow-down-right"></i>
+                  </div>
+                  <span
+                    class="summary-card__metric summary-card__metric--danger"
+                    >-3.1%</span
+                  >
+                </div>
+                <div>
+                  <p class="summary-card__label">Expenses</p>
+                  <h1 class="summary-card__value">$3,842.75</h1>
+                </div>
+              </div>
+
+              <div class="summary-card summary-card--light">
+                <div class="summary-card__top">
+                  <div class="summary-card__icon summary-card__icon--green">
+                    <i class="bi bi-piggy-bank"></i>
+                  </div>
+                  <span class="summary-card__metric">5.8%</span>
+                </div>
+                <div>
+                  <p class="summary-card__label">Savings</p>
+                  <h1 class="summary-card__value">$12,450.00</h1>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid px-4 pb-4">
+              <div class="row g-4">
+                <!-- Spending Activity Chart -->
+                <div class="col-lg-8">
+                  <div class="card-box h-100">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div>
+                        <h5 class="mb-1 fw-bold">Spending Activity</h5>
+                        <p class="text-secondary mb-0">Last 7 days</p>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <button
+                          class="btn btn-primary-subtle text-primary px-3"
+                          data-spending-range="week"
+                        >
+                          Week
+                        </button>
+                        <button
+                          class="btn btn-link text-secondary text-decoration-none"
+                          data-spending-range="month"
+                        >
+                          Month
+                        </button>
+                      </div>
+                    </div>
+                    <div id="chart"></div>
+                  </div>
+                </div>
+
+                <!-- Quick Transfer -->
+                <div class="col-lg-4">
+                  <div class="card-box h-100">
+                    <h5 class="mb-4 fw-bold">Quick Transfer</h5>
+
+                    <div
+                      class="d-flex justify-content-between text-center mb-5"
+                    >
+                      <div class="transfer-user">
+                        <img
+                          src="https://i.pravatar.cc/80?img=47"
+                          class="transfer-avatar rounded-circle"
+                          alt="Sarah"
+                        />
+                        <p class="mb-0 mt-3 text-secondary">Sarah</p>
+                      </div>
+                      <div class="transfer-user">
+                        <img
+                          src="https://i.pravatar.cc/80?img=12"
+                          class="transfer-avatar rounded-circle"
+                          alt="Mike"
+                        />
+                        <p class="mb-0 mt-3 text-secondary">Mike</p>
+                      </div>
+                      <div class="transfer-user">
+                        <img
+                          src="https://i.pravatar.cc/80?img=32"
+                          class="transfer-avatar transfer-avatar-active rounded-circle"
+                          alt="Emma"
+                        />
+                        <p class="mb-0 mt-3 text-secondary">Emma</p>
+                      </div>
+                      <div class="transfer-user">
+                        <img
+                          src="https://i.pravatar.cc/80?img=15"
+                          class="transfer-avatar rounded-circle"
+                          alt="David"
+                        />
+                        <p class="mb-0 mt-3 text-secondary">David</p>
+                      </div>
+                      <div class="transfer-user">
+                        <img
+                          src="https://i.pravatar.cc/80?img=68"
+                          class="transfer-avatar rounded-circle"
+                          alt="Lisa"
+                        />
+                        <p class="mb-0 mt-3 text-secondary">Lisa</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                      <div
+                        class="transfer-input flex-grow-1 d-flex align-items-center gap-2 px-3"
+                      >
+                        <span class="text-secondary fs-5">$</span>
+                        <input
+                          type="number"
+                          class="form-control border-0 shadow-none bg-transparent p-0"
+                          value="-4"
+                        />
+                      </div>
+                      <button class="btn btn-primary transfer-button">
+                        <i class="bi bi-send fs-4"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="container p-4 mt-3">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="recent-headig">Recent Transactions</h3>
+                    <div>
+                      <a
+                        href="#section2"
+                        data-section-target="section2"
+                        style="text-decoration: none"
+                        >View All</a
+                      >
+                      <i class="bi bi-arrow-right"></i>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column mt-5">
+                    <div class="storeBox">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon icon-bg-blue">
+                          <i class="bi bi-bag-check"></i>
+                        </div>
+                        <div>
+                          <h4 class="storeName">Apple Store</h4>
+                          <p class="storeTime">Jan 15, 10:30 AM</p>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <h4 class="history">$999.00</h4>
+                      </div>
+                    </div>
+
+                    <div class="storeBox">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon icon-bg-green">
+                          <i class="bi bi-briefcase"></i>
+                        </div>
+                        <div>
+                          <h4 class="storeName">Salary Deposit</h4>
+                          <p class="storeTime">Jan 15, 9:00 AM</p>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <h4 class="history income">+$5,200.00</h4>
+                      </div>
+                    </div>
+
+                    <div class="storeBox">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon icon-bg-yellow">
+                          <i class="bi bi-fork-knife"></i>
+                        </div>
+                        <div>
+                          <h4 class="storeName">Uber Eats</h4>
+                          <p class="storeTime">Jan 14, 7:45 PM</p>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <h4 class="history">$32.50</h4>
+                      </div>
+                    </div>
+
+                    <div class="storeBox">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon icon-bg-purple">
+                          <i class="bi bi-tv"></i>
+                        </div>
+                        <div>
+                          <h4 class="storeName">Netflix</h4>
+                          <p class="storeTime">Jan 14, 12:00 AM</p>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <h4 class="history">$15.99</h4>
+                      </div>
+                    </div>
+
+                    <div class="storeBox">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon icon-bg-cyan">
+                          <i class="bi bi-ev-front"></i>
+                        </div>
+                        <div>
+                          <h4 class="storeName">Shell Gas Station</h4>
+                          <p class="storeTime">Jan 13, 4:20 PM</p>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <h4 class="history">$65.40</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======================== SECTION 2: TRANSACTIONS ======================== -->
+          <section id="section2" class="page-section transaction-section mt-2">
+            <div class="filter-box">
+              <div class="section-header">
+                <div class="searchbar">
+                  <i class="bi bi-search"></i>
+                  <input
+                    placeholder="Search...."
+                    class="inputSearch"
+                    id="searchbar"
+                    oninput="search(this)"
+                  />
+                </div>
+
+                <div class="filter-group">
+                  <button class="filter-btn active" data-filter="all">
+                    All
+                  </button>
+                  <button class="filter-btn" data-filter="income">
+                    Income
+                  </button>
+                  <button class="filter-btn" data-filter="expense">
+                    Expense
+                  </button>
+                  <button class="filter-btn" data-filter="pending">
+                    Pending
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="mobile-more-filters d-md-none">
+              <i class="bi bi-funnel"></i> More Filters
+            </button>
+            <div class="transaction-list" id="transactionList"></div>
+          </section>
+
+          <!-- ======================== SECTION 3: ANALYTICS ======================== -->
+          <section id="section3" class="page-section analytics-section">
+            <div class="analytics-grid">
+              <div class="analytics-card">
+                <h5 class="analytics-title">Spending by Category</h5>
+                <div id="categoryChart" class="analytics-donut"></div>
+                <div class="category-list" id="categoryList"></div>
+              </div>
+
+              <div class="analytics-card">
+                <div class="analytics-card-header">
+                  <h5 class="analytics-title mb-0">Monthly Budget</h5>
+                </div>
+                <div class="budget-list" id="budgetList"></div>
+              </div>
+            </div>
+
+            <div class="analytics-card mt-4">
+              <div class="analytics-card-header">
+                <h5 class="analytics-title mb-0">Income vs Expenses</h5>
+                <div class="analytics-toggle">
+                  <button
+                    class="analytics-toggle-btn active"
+                    data-income-range="six"
+                  >
+                    6M
+                  </button>
+                  <button class="analytics-toggle-btn" data-income-range="year">
+                    1Y
+                  </button>
+                </div>
+              </div>
+              <div id="incomeExpenseChart" class="income-expense-chart"></div>
+            </div>
+
+            <div class="analytics-card mt-4">
+              <div class="analytics-card-header">
+                <h5 class="analytics-title mb-0">Recurring Subscriptions</h5>
+                <div class="subscriptions-total" id="subscriptionsTotal"></div>
+              </div>
+              <div class="subscription-list" id="subscriptionList"></div>
+            </div>
+          </section>
+
+          <!-- ======================== SECTION 4: MY CARDS ======================== -->
+          <section id="section4" class="page-section cards-section">
+            <div class="cards-panel">
+              <div class="cards-panel-header">
+                <h5>Your Cards</h5>
+                <button class="add-card-btn" id="addCardBtn">
+                  <i class="bi bi-plus-lg"></i> Add Card
+                </button>
+              </div>
+
+              <div class="card-slider">
+                <button class="card-arrow" id="prevCardBtn">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="payment-card">
+                  <div class="payment-card-top">
+                    <div>
+                      <p>Current Balance</p>
+                      <h3 id="cardBalance">$12,450.00</h3>
+                    </div>
+                    <i class="bi bi-wifi fs-3"></i>
+                  </div>
+
+                  <div class="card-chip"></div>
+
+                  <div class="payment-card-bottom">
+                    <div>
+                      <p>Card Number</p>
+                      <h5 id="cardNumber">**** **** **** 4532</h5>
+                    </div>
+                    <div>
+                      <p>Expires</p>
+                      <h5 id="cardExpiry">12/26</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="card-arrow" id="nextCardBtn">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="card-dots" id="cardDots"></div>
+            </div>
+
+            <div class="cards-info-grid">
+              <!-- Card Settings -->
+              <div class="cards-panel">
+                <h5 class="mb-4">Card Settings</h5>
+
+                <div class="setting-row">
+                  <div class="setting-icon setting-icon-red">
+                    <i class="bi bi-snow"></i>
+                  </div>
+                  <div class="setting-text">
+                    <h6>Freeze Card</h6>
+                    <p>Temporarily disable card</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="freezeToggle" />
+                    <span></span>
+                  </label>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-icon setting-icon-blue">
+                    <i class="bi bi-globe"></i>
+                  </div>
+                  <div class="setting-text">
+                    <h6>Online Payments</h6>
+                    <p>Allow online transactions</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span></span>
+                  </label>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-icon setting-icon-green">
+                    <i class="bi bi-wifi"></i>
+                  </div>
+                  <div class="setting-text">
+                    <h6>Contactless</h6>
+                    <p>Enable tap to pay</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span></span>
+                  </label>
+                </div>
+
+                <div class="limit-row">
+                  <strong>Daily Spending Limit</strong>
+                  <span id="limitValue">$7,000</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="10000"
+                  value="7000"
+                  class="limit-slider"
+                  id="limitSlider"
+                />
+                <div class="limit-labels">
+                  <span>$0</span>
+                  <span>$10,000</span>
+                </div>
+              </div>
+
+              <!-- Card Details -->
+              <div class="cards-panel">
+                <h5 class="mb-4">Card Details</h5>
+
+                <div class="detail-row">
+                  <span>Card Type</span>
+                  <strong id="detailType">Visa</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Card Number</span>
+                  <strong id="detailNumber">**** 4532</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Expiry Date</span>
+                  <strong id="detailExpiry">12/26</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Status</span>
+                  <strong class="status-pill" id="detailStatus">Active</strong>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======================== SECTION 5: SETTINGS ======================== -->
+          <section id="section5" class="page-section settings-section">
+            <!-- Profile Card -->
+            <div class="settings-card profile-card">
+              <div class="profile-info">
+                <img
+                  src="https://i.pravatar.cc/40"
+                  class="profile-avatar"
+                  alt="Profile"
+                />
+                <div>
+                  <h4>Hemanth Tejavath</h4>
+                  <p>Hemanth@email.com</p>
+                  <span>Premium Member</span>
+                </div>
+              </div>
+              <button class="edit-profile-btn" id="editProfileBtn">
+                Edit Profile
+              </button>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="settings-card">
+              <h5>Account</h5>
+              <button class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"
+                    ><i class="bi bi-person"></i
+                  ></span>
+                  Personal Information
+                </span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"
+                    ><i class="bi bi-shield"></i
+                  ></span>
+                  Security & Privacy
+                </span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"
+                    ><i class="bi bi-credit-card"></i
+                  ></span>
+                  Payment Methods
+                </span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+
+            <!-- Preferences -->
+            <div class="settings-card">
+              <h5>Preferences</h5>
+              <div class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"><i class="bi bi-bell"></i></span>
+                  Notifications
+                </span>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span></span>
+                </label>
+              </div>
+              <div class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"><i class="bi bi-moon"></i></span>
+                  Dark Mode
+                </span>
+                <label class="switch">
+                  <input type="checkbox" id="darkModeToggle" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="settings-row">
+                <span class="settings-row-left">
+                  <span class="settings-icon"><i class="bi bi-phone"></i></span>
+                  Biometric Login
+                </span>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Support -->
+            <div class="settings-card">
+              <h5>Support</h5>
+              <button class="settings-row mb-0">
+                <span class="settings-row-left">
+                  <span class="settings-icon"
+                    ><i class="bi bi-question-circle"></i
+                  ></span>
+                  Help Center
+                </span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+
+            <!-- Logout -->
+            <div class="settings-card">
+              <button class="settings-row logout-row mb-0" id="logoutBtn">
+                <span class="settings-row-left">
+                  <span class="settings-icon logout-icon"
+                    ><i class="bi bi-box-arrow-right"></i
+                  ></span>
+                  Log Out
+                </span>
+              </button>
+            </div>
+
+            <p class="app-version">Nova Financial v1.0.0</p>
+          </section>
+        </main>
+
+        <!-- ======================== MOBILE BOTTOM NAVIGATION ======================== -->
+        <nav class="mobile-bottom-nav d-md-none">
+          <a
+            class="mobile-nav-link active-link"
+            href="#section1"
+            data-section-target="section1"
+          >
+            <i class="bi bi-grid"></i>
+            <span>Home</span>
+          </a>
+          <a
+            class="mobile-nav-link"
+            href="#section2"
+            data-section-target="section2"
+          >
+            <i class="bi bi-arrow-left-right"></i>
+            <span>Transactions</span>
+          </a>
+          <a
+            class="mobile-nav-link"
+            href="#section3"
+            data-section-target="section3"
+          >
+            <i class="bi bi-pie-chart"></i>
+            <span>Analytics</span>
+          </a>
+          <a
+            class="mobile-nav-link"
+            href="#section4"
+            data-section-target="section4"
+          >
+            <i class="bi bi-credit-card"></i>
+            <span>Cards</span>
+          </a>
+          <a
+            class="mobile-nav-link"
+            href="#section5"
+            data-section-target="section5"
+          >
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
