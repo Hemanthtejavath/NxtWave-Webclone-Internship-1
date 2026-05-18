@@ -164,15 +164,30 @@ The project is fully responsive and optimized for:
 
 ---
 
-## 📄 License
+## 🔄 Feedback & Iterations
 
-This project is created for educational purposes as part of the NxtWave Internship Program.
+Throughout the process, I:
+- Improved alignment and spacing after peer reviews
+- Adjusted typography and buttons for better mobile usability
+- Updated animations and scroll speed based on feedback
+
+---
+
+## 📽️ Final Thoughts
+
+This project helped me **strengthen my frontend fundamentals** and proved that even without JavaScript, it’s possible to build interactive, beautiful static websites. I learned a lot about layout, responsiveness, and how to break down a complex design into manageable components.
+
+---
+
+## 🚀 How to Run This Project
+//here the website link :
+https://hemanthtejavath.github.io/NxtWave-Webclone-Internship-1/
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Reference: [Financial Dashboard](https://financialdash.ccbp.tech/)
+- Reference: [Financial Dashboard](https://financialdash.ccbp.tech)
 - NxtWave Internship Program
 - Mentors and peer reviewers
 
